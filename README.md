@@ -16,7 +16,7 @@ Features include:
 * Storing initial html report and screenshots if needed.
 
 ###Installing plugin
-* Download plugin .hpi file
+* Download plugin [.hpi file](https://github.com/sergey-myasnikov/tc-plugin/releases/download/tc-plugin-v1.0/tc-plugin.hpi)
 * In Jenkins go to ```Manage Jenkin``` > ```Manage Plugins``` > ```Advanced```
 * In ```Upload Plugin``` section click ```Choose file```, select and upload .hpi file
 * Finally restart Jenkins after installation is complete.
