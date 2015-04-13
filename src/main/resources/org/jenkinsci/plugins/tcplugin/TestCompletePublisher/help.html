@@ -1,0 +1,34 @@
+<div>
+  This step will publish TestComplete results from the worksapace-based location of <i>result file(s)</i>.
+  <br/><br/>
+  For more information see 
+  <a href="http://support.smartbear.com/viewarticle/55128/">Exporting Test Results</a> article.
+  <br/>
+  Scenario is the following:
+	<ul>
+		<li>
+			If .mht location given: decompress result .mht file to <i>%WORKSPACE%\MHTParse</i> folder
+		</li>
+		<li>
+			Generate <a href="http://junit.org">JUnit</a> test result report <i>%WORKSPACE%\junitresult.xml</i>
+		</li>
+		<li>
+			Publish junitresult.xml with 'Publish JUnit test result report' step
+		</li>
+		<li>
+			Optional:
+		</li>
+		<ul>
+			<li>
+				Publish HTML result with 'Publish HTML reports' step
+			</li>
+			<li>
+				Publish screenshots with 'Publish HTML reports' step
+			</li>
+			<li>
+				If .mht location given: publish .mht file itself with 'Archive the artifacts' step
+			</li>
+
+		</ul>
+	</ul>
+</div>

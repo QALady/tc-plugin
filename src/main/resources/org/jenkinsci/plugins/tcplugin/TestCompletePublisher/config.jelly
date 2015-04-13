@@ -1,0 +1,61 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  <!--
+    This jelly script is used for per-project configuration.
+
+    See global.jelly for a general discussion about jelly script.
+  -->
+  
+  <f:entry>
+	<st:nbsp/>
+  </f:entry> 
+  
+  <f:entry
+  		name="resultLocation"
+  		title="Result location"
+  		field="resultLocation"
+  		description="workspace-based path to TestComplete result .html or .mht file">
+    <f:textbox />
+  </f:entry>
+  
+  <!--f:validateButton
+   title="Verify MHTML location" progress="Verifying..."
+   method="testMHTML" with="resultLocation" /-->
+
+  <f:entry>
+	<st:nbsp/>
+  </f:entry>
+   
+  <f:entry
+  		name="publishHtml"
+  		title="Publish HTML results"
+  		field="publishHtml">
+    <f:checkbox />
+  </f:entry>
+  
+  <!--f:entry>
+	<st:nbsp/>
+  </f:entry-->
+
+  <f:entry
+  		name="publishScreenshots"
+  		title="Publish screenshots"
+  		field="publishScreenshots">
+    <f:checkbox />
+  </f:entry>
+ 
+  <!--f:entry>
+	<st:nbsp/>
+  </f:entry-->
+  
+  <st:nbsp/><f:entry
+  		name="publishArtifacts"
+  		title="Publish MHTML file as Artifact"
+  		field="publishArtifacts">
+    <f:checkbox />
+  </f:entry>
+  
+  <!--f:entry>
+	<st:nbsp/>
+  </f:entry-->
+
+</j:jelly>

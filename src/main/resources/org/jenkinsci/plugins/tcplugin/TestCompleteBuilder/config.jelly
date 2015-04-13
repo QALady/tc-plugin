@@ -1,0 +1,98 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  <!--
+    This jelly script is used for per-project configuration.
+
+    See global.jelly for a general discussion about jelly script.
+  -->
+
+  <f:entry>
+	<st:nbsp/>
+  </f:entry> 
+  
+  <f:entry
+  		name="testExecuteLocation"
+  		title="TestExecute or TestComplete location"
+  		field="testExecuteLocation"
+  		description="Full path to TestExecute.exe or TestComplete.exe">
+    <f:textbox 
+    	default="C:\Program Files\SmartBear\TestComplete 10\Bin\TestComplete.exe"/>
+  </f:entry>
+  
+  <f:entry>
+	<st:nbsp/>
+  </f:entry>
+  
+  <f:block>
+  
+  <f:entry
+  		name="projectLocation"
+  		title="Location of a project or project suit"
+  		field="projectLocation"
+  		description="workspace-based path to TestComplete project (.mds file) or project suit (.pjs file)">
+    <f:textbox />
+  </f:entry>
+  
+  <f:entry>
+	<st:nbsp/>
+  </f:entry>
+  
+  <f:entry
+  		name="projectName"
+  		title="Name of a project in project suit"
+  		field="projectName" >
+    <f:textbox />
+  </f:entry>
+  
+  </f:block>
+  
+  <f:entry>
+	<st:nbsp/>
+  </f:entry>
+  
+  <f:entry
+  	name="additionalParameters"
+  	title="Additional command line arguments"
+  	field="additionalParameters" >
+    <f:textbox default="/exit /SilentMode /ForceConversion" />
+  </f:entry>
+ 
+  <f:entry>
+	<st:nbsp/>
+  </f:entry>
+
+  <f:advanced>
+  	<f:entry
+  			name="deleteLogs"
+  			title="Cleanup logs before test execution"
+  			field="deleteLogs">
+    	<f:checkbox default="true"/>
+  	</f:entry>
+  	
+  	<f:entry>
+		<st:nbsp/>
+  	</f:entry>
+  	
+  	<f:entry
+  			name="deleteExtender"
+  			title="Delete .tcCfgExtender file after test"
+  			field="deleteExtender">
+    	<f:checkbox default="true"/>
+  	</f:entry> 
+  	 
+  </f:advanced>
+  
+  <f:entry>
+	<st:nbsp/>
+  </f:entry>
+  
+  <f:validateButton
+  	title="Generate Script"
+  	progress="Generating..."
+  	method="testBatch"
+  	with="testExecuteLocation,projectLocation,projectName,additionalParameters,deleteLogs,deleteExtender" />
+
+  <f:entry>
+	<st:nbsp/>
+  </f:entry>
+
+</j:jelly>

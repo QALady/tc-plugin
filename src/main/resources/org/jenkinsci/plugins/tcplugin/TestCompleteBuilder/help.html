@@ -1,0 +1,33 @@
+<div>
+  This step will run TestComplete with a batch script. See TestComplete Command Line guide 
+  <a href="http://support.smartbear.com/viewarticle/55587/">here</a>.
+  <br/>
+  In general syntax is the following:
+  <br/><br/>
+  <pre style="background-color: #E0E0E0;">
+  
+  TestComplete.exe | TestExecute.exe [file_name [/run 
+    [(/project:project_name) | (/project:project_name /projectitem:item_name) |
+     (/project:project_name /test:test_name) |
+     (/project:project_name /unit:unit_name /routine:routine_name)] 
+    [/ExportLog:File_name] [/exit]]
+    [/SilentMode [/ErrorLog:File_name] [/ForceConversion]] ]
+    [Timeout:Time_in_seconds] [/ns] [/agpatcheroff]
+  </pre>
+  <br/>
+  You should provide
+  <ul>
+  	<li>
+  		Path to TestComplete.exe or TestExecute.exe
+  	</li>
+  	<li>
+  		Project or project suit to load
+  	</li>
+  	<li>
+  		Space separated list of any other parameters
+  	</li>
+  </ul>
+  <br/>
+  After finished click <i>Generate Script</i> button and verify result batch script. Visit
+  <a href="http://support.smartbear.com/viewarticle/56560/">this page</a> for script example.
+</div>
